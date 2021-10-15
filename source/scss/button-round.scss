@@ -1,0 +1,28 @@
+.button-round {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-style: none;
+  border-radius: 50%;
+
+  &--brands {
+    border: 2px solid $button;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -50%) rotate(-45deg);
+    border-right: 2px solid $button;
+    border-bottom: 2px solid $button;
+  }
+}
+

@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+/* Variables */
+
+
+// colors
+$background: #F8F8F8;
+$font-color: #7E7E82;
+$font-color-black: #1B1C21;
+$white: #FFFFFF;
+$black: #666666;
+$button: #FF3E79;
+$border-brands: #EAEAEA;
+$active-bullet: #B5B6BC;
+$inactive-bullet: #DDDDDD;
+$linear-gradient: #F8F8F8;
+$linear-gradient-opacity: rgba(248, 248, 248, 0.0001);
+$focus: deepskyblue;
+
+// breakpoints
+$min-mobile-width: 320px;
+$max-mobile-width: 767px;
+$min-tablet-width: 768px;
+$min-tablet-width: 768px;
+$min-desktop-width: 1440px;
+
+
+
+
+/* Fonts */
+
+$font-family: 'TTLakes', Arial, sans-serif;
+
+// Адаптивный шрифт
+$max-width: 1440; /* Размер всего полотна, указывать без пикселей */
+
+@mixin adaptiv-font($pcSize, $mobSize){
+	$addSize: $pcSize - $mobSize;
+	$addMobSize: $mobSize + $mobSize * .7;
+	@media (max-width: 767px){font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$max-width}));}
+	@media (min-width: 768px){font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$max-width}));}
+	@media (min-width: #{$max-width + px}){font-size: #{$pcSize + px};}
+}
+
+/* Использование миксина Адаптивный шрифт*/
+
+// .block {
+//   @include adaptiv-font(30, 14); Первый параметр - размер шрифта на ПК, второй - размер шрифта
+//                                  при минимальном разрешении 320px (выставить либо по макету,
+//                                  либо на глаз)
+// }

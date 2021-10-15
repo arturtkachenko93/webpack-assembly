@@ -1,0 +1,204 @@
+.brands {
+  max-width: 1120px;
+  padding-bottom: 38px;
+  padding-right: 0;
+
+  @media(min-width: $min-tablet-width) {
+    align-self: flex-end;
+  }
+
+  @media (min-width: $min-desktop-width) {
+    padding-bottom: 50px;
+  }
+}
+
+.brands__title {
+  padding: 16px 16px 16px 0;
+  background-image: linear-gradient(90deg, $linear-gradient 1.39%, $white 100%);
+}
+
+.brands__wrapper {
+  position: relative;
+  padding: 16px 0 32px 0;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 24px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(270deg, $linear-gradient 16.84%, $linear-gradient-opacity 100%);
+    z-index: 9999;
+  }
+
+  @media (min-width: $min-tablet-width) {
+    padding-right: 8px;
+  }
+}
+
+.brands__list {
+  @media (min-width: $min-tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    height: 179px;
+    overflow: hidden;
+    transition: height ease 0.5s;
+
+    &--visible {
+      height: 357px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &--visible {
+      height: 267px;
+    }
+  }
+}
+
+.brands__item {
+  display: flex;
+  flex: 1 0 240px;
+  background-color: $white;
+  background-repeat: no-repeat;
+  border: 1px solid $border-brands;
+  border-radius: 6px;
+  line-height: 0;
+  padding: 16px;
+  margin-right: 16px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--lenovo::before {
+    width: 108px;
+    height: 32px;
+    background-image: image-set(url("../img/icons/lenovo.png") 1x);
+  }
+
+  &--samsung::before {
+    width: 116px;
+    height: 39px;
+    background-image: image-set(url("../img/icons/samsung.png") 1x);
+  }
+
+  &--apple::before {
+    width: 44px;
+    height: 44px;
+    background-image: image-set(url("../img/icons/apple.png") 1x);
+  }
+
+  &--viewsonic::before {
+    width: 128px;
+    height: 21px;
+    background-image: image-set(url("../img/icons/view-sonic.png") 1x);
+  }
+
+  &--bosh::before {
+    width: 128px;
+    height: 29px;
+    background-image: image-set(url("../img/icons/bosh.png") 1x);
+  }
+
+  &--hp::before {
+    width: 52px;
+    height: 52px;
+    left: 10px;
+    background-image: image-set(url("../img/icons/hp.png") 1x);
+  }
+
+  &--acer::before {
+    width: 94px;
+    height: 24px;
+    background-image: image-set(url("../img/icons/acer.png") 1x);
+  }
+
+  &--sony::before {
+    width: 128px;
+    height: 26px;
+    background-image: image-set(url("../img/icons/sony.png") 1x);
+  }
+
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    flex: 1 0 224px;
+    margin-bottom: 16px;
+
+    &.swiper-slide {
+      height: auto;
+    }
+  }
+}
+
+.brands__link {
+  margin-left: auto;
+}
+
+.brands__pagination {
+  @media (min-width: $min-tablet-width) {
+    display: none;
+  }
+
+  &.swiper-pagination {
+    bottom: -6px;
+  }
+
+  & .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: $inactive-bullet;
+    opacity: 1;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background-color: $active-bullet;
+    opacity: 1;
+  }
+}
+
+.brands__button-wrapper {
+  display: none;
+
+  @media (min-width: $min-tablet-width) {
+    position: relative;
+    display: block;
+  }
+}
+
+.brands__button {
+  position: relative;
+  min-width: 52px;
+  justify-content: flex-start;
+  font-size: 16px;
+  font-weight: 500;
+  color: $font-color-black;
+  line-height: calc(24 / 16 * 100%);
+  cursor: pointer;
+  padding-left: 28px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url("../img/icons/btn-arrows.svg") no-repeat;
+    top: 7px;
+    left: 7px;
+    width: 8px;
+    height: 15px;
+    transition: transform ease-in 0.8s;
+    transform: rotate(540deg);
+    cursor: pointer;
+  }
+
+  &--rotate::before {
+    top: 12px;
+    transform: rotate(0);
+  }
+}
