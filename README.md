@@ -1,6 +1,6 @@
 # Все действия выполнять с правами администратора!
 
-:white_check_mark: Установить NodeJS :arrow_right: [скачать здесь](https://nodejs.org/en/)
+:white_check_mark: Установить NodeJS (LTS) :arrow_right: [скачать здесь](https://nodejs.org/en/)
 
 ## Подготовка
 
@@ -23,3 +23,5 @@
 ## Комментарии
 
 **they 'll be here soon ...**
+
+## [DEMO](https://arturtkachenko93.github.io/webpack-assembly/)
